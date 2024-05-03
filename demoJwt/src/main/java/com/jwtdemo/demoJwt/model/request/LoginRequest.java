@@ -1,4 +1,4 @@
-package com.jwtdemo.demoJwt.auth;
+package com.jwtdemo.demoJwt.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationRequest {
+public class LoginRequest {
     private String email;
     String password;
 }

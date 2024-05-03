@@ -41,8 +41,8 @@ public class ApplicationConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-    @Bean
-    MvcRequestMatcher.Builder mvc(HandlerMappingIntrospector introspector) {
-        return new MvcRequestMatcher.Builder(introspector);
-    }
+//    @Bean
+//    MvcRequestMatcher.Builder mvc(HandlerMappingIntrospector introspector) {
+//        return new MvcRequestMatcher.Builder(introspector);
+//    }
 }

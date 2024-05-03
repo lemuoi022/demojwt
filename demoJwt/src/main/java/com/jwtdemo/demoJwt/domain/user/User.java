@@ -1,6 +1,7 @@
-package com.jwtdemo.demoJwt.domain;
+package com.jwtdemo.demoJwt.domain.user;
 
-import ch.qos.logback.core.subst.Token;
+import com.jwtdemo.demoJwt.domain.token.Token;
+import com.jwtdemo.demoJwt.domain.user.Role;
 import jakarta.persistence.*;
 
 import lombok.*;
@@ -31,9 +32,11 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @OneToMany(mappedBy = "user")
+    private List<Token> tokens;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority((role.name())));
+        return role.getAuthorities();
     }
 
     @Override

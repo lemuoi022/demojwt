@@ -1,6 +1,6 @@
 package com.jwtdemo.demoJwt.repository;
 
-import com.jwtdemo.demoJwt.domain.User;
+import com.jwtdemo.demoJwt.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

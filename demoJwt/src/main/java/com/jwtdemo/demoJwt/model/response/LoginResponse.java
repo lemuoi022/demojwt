@@ -1,4 +1,4 @@
-package com.jwtdemo.demoJwt.auth;
+package com.jwtdemo.demoJwt.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationResponse {
+public class LoginResponse {
     private String token;
 }
